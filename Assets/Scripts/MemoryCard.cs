@@ -5,4 +5,9 @@ using UnityEngine;
 public class MemoryCard : MonoBehaviour
 {
     public int identifier;
+
+    public void OnMouseDown()
+    {
+        FindObjectOfType<GameManager>().CardClicked(this);
+    }
 }

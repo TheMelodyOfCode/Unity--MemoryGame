@@ -2579,6 +2579,23 @@ MonoBehaviour:
   clipCardUp: {fileID: 8300000, guid: 5872d9a45ff20f74f9d2ec042a4e014f, type: 3}
   clipCardDown: {fileID: 8300000, guid: 6a41022ef4c357640b67872788a2947f, type: 3}
   clipCardMatch: {fileID: 8300000, guid: cdd7d773fb5ec8e4a956c2046ca91145, type: 3}
+  allCards:
+  - {fileID: 1937631969}
+  - {fileID: 1312586265}
+  - {fileID: 2117891921}
+  - {fileID: 1579211649}
+  - {fileID: 1195555453}
+  - {fileID: 54607769}
+  - {fileID: 1257595799}
+  - {fileID: 1628761388}
+  - {fileID: 1262448421}
+  - {fileID: 770639980}
+  - {fileID: 729897602}
+  - {fileID: 1763342091}
+  - {fileID: 1746413842}
+  - {fileID: 856747098}
+  - {fileID: 514726591}
+  - {fileID: 723076239}
 --- !u!4 &1290768608
 Transform:
   m_ObjectHideFlags: 0

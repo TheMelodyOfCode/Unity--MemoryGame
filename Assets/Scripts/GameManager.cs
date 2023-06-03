@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,14 +10,36 @@ public class GameManager : MonoBehaviour
     public AudioClip clipCardDown;
     public AudioClip clipCardMatch;
 
+    public GameObject[] allCards;
+    public List<Vector3> allPositions = new List<Vector3>();
+
     private MemoryCard firstSelectedCard;
     private MemoryCard secondSelectedCard;
 
     private bool canClick = true;
 
+    private void Awake()
+    {
+        // Get all card positions and save in list
+        foreach(GameObject card in allCards)
+        {
+            allPositions.Add(card.transform.position);
+        }
+
+        // Randomize positions 
+        System.Random randomNumber = new System.Random();
+        allPositions = allPositions.OrderBy(position => randomNumber.Next()).ToList();
+
+        // Assign new positions
+        for (int i = 0; i < allCards.Length; i++)
+        {
+            allCards[i].transform.position = allPositions[i];
+        }
+    }
+
     public void CardClicked(MemoryCard card)
     {
-        if (canClick == false) return;
+        if (canClick == false || card == firstSelectedCard  ) return;
 
         // Always rotate card up to show its image
         card.targetRotation = 90;

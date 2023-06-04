@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
     private MemoryCard secondSelectedCard;
 
     private bool canClick = true;
+
+    private int successfulMatches = 0;
+
+    public int currentLevelIndex = 0;
 
     private void Awake()
     {
@@ -70,6 +75,15 @@ public class GameManager : MonoBehaviour
             Destroy(secondSelectedCard.gameObject);
 
             audioSource.PlayOneShot(clipCardMatch);
+
+            successfulMatches++; // Increment the count of successful matches
+
+            if (successfulMatches == 8)
+            {
+                // Code to go to the next scene when 8 successful matches are reached
+                // Example: SceneManager.LoadScene("NextScene");
+                LoadNextLevel();
+            }
         }
         else
         {
@@ -88,5 +102,11 @@ public class GameManager : MonoBehaviour
         secondSelectedCard = null;
 
         canClick = true;
+    }
+
+    public void LoadNextLevel()
+    {
+        currentLevelIndex++;
+        SceneManager.LoadScene(currentLevelIndex);
     }
 }

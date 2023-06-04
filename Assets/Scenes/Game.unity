@@ -2596,6 +2596,8 @@ MonoBehaviour:
   - {fileID: 856747098}
   - {fileID: 514726591}
   - {fileID: 723076239}
+  allPositions: []
+  currentLevelIndex: 1
 --- !u!4 &1290768608
 Transform:
   m_ObjectHideFlags: 0

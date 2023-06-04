@@ -1,6 +1,6 @@
 # 3D Memory Game
 
-> - In Memory Game, you will be challenging your memory by finding matching pairs within a limited time frame.
+> - In Memory Game, you will be challenging your memory by finding matching pairs.
 
 ### Objectives of this project
 

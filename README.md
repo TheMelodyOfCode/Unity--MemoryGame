@@ -29,7 +29,7 @@
 
 > - In this folder you will find the finished Game ready to play.
 >   - Extract zip file
->   - Run MemoryGame.exe
+>   - Run Memory_Game.exe
 
 **Controls**
 
